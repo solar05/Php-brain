@@ -1,0 +1,13 @@
+{
+    "name": "artems/brain",
+    "bin": "[bin/brain-games]",
+    "description": "Brain games project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "solar05",
+            "email": "artem00298@gmail.com"
+        }
+    ],
+    "require": {}
+}
