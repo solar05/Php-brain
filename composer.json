@@ -1,6 +1,6 @@
 {
     "name": "artems/brain",
-    "bin": "[bin/brain-games]",
+    "bin": ["bin/brain-games"],
     "description": "Brain games project",
     "type": "project",
     "authors": [
