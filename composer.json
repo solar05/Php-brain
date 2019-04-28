@@ -18,7 +18,7 @@
                   "src/even.php"
               ],
         "psr-4": {
-            "Brain\\Games": "src"
+            "Brain\\Games\\": "src"
         }
     },
     "require": {
