@@ -14,7 +14,9 @@
         "phpcs": "phpcs"
     },
     "autoload": {
-        "file": ["src/Cli.php"]
+        "files": ["src/Cli.php",
+                  "src/even.php"
+              ],
     },
     "require": {
     	"php": ">=7.0",
