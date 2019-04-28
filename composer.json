@@ -16,7 +16,10 @@
     "autoload": {
         "files": ["src/Cli.php",
                   "src/even.php"
-              ]
+              ],
+        "psr-4": {
+            "Brain\\Games": "src"
+        }
     },
     "require": {
     	"php": ">=7.0",
