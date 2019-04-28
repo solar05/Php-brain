@@ -16,7 +16,7 @@
     "autoload": {
         "files": ["src/Cli.php",
                   "src/even.php"
-              ],
+              ]
     },
     "require": {
     	"php": ">=7.0",
