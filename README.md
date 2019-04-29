@@ -4,8 +4,10 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8848cd6552386d8b312e/test_coverage)](https://codeclimate.com/github/solar05/project-lvl1-s482/test_coverage)
 
-Brain-games
-[![asciicast](https://asciinema.org/a/nzJuT53LzOZvEIybwxwyEeIGf.svg)](https://asciinema.org/a/nzJuT53LzOZvEIybwxwyEeIGf)
+## Installation:
+composer require artems/brain:dev-master
 
-Brain-even
-[![asciicast](https://asciinema.org/a/Nn6UCMzzaYB3Z97P61q6ryt6m.svg)](https://asciinema.org/a/Nn6UCMzzaYB3Z97P61q6ryt6m)
+## Asciinema :
+Brain-games : [link](https://asciinema.org/a/nzJuT53LzOZvEIybwxwyEeIGf)
+
+Brain-even: [link](https://asciinema.org/a/Nn6UCMzzaYB3Z97P61q6ryt6m) s
