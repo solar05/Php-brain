@@ -4,7 +4,7 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\gameEngine\playGame;
 
-const rules = 'Answer "yes" if number even otherwise answer "no"';
+const RULES = 'Answer "yes" if number even otherwise answer "no"';
 
 function isEven($num)
 {
@@ -19,5 +19,5 @@ function playEven()
         return array('question' => $question,
                      'answer' => $answer);
     };
-    playGame($getGameStage, rules);
+    playGame($getGameStage, RULES);
 }
