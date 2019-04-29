@@ -15,11 +15,9 @@
     },
     "autoload": {
         "files": ["src/Cli.php",
-                  "src/even.php"
-              ],
-        "psr-4": {
-            "Brain\\Games\\": "src"
-        }
+                  "src/games/even.php",
+                  "src/gameEngine.php"
+              ]
     },
     "require": {
     	"php": ">=7.0",
