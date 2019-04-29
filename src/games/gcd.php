@@ -6,8 +6,9 @@ use function BrainGames\gameEngine\playGame;
 const RULES = 'Find the greatest common divisor of given numbers.';
 
 function findGcd($firstNum, $secondNum)
-{   if (!$secondNum) {
-    return $firstNum;
+{
+    if (!$secondNum) {
+        return $firstNum;
     }
     return findGcd($secondNum, $firstNum % $secondNum);
 }
