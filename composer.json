@@ -4,6 +4,7 @@
             "bin/brain-even", 
             "bin/brain-calc",
             "bin/brain-progression", 
+            "bin/brain-prime",
             "bin/brain-gcd"],
     "description": "Brain games project",
     "type": "project",
@@ -23,6 +24,7 @@
                   "src/games/calc.php",
                   "src/games/gcd.php",
                   "src/games/progression.php",
+                  "src/games/prime.php",
                   "src/gameEngine.php"
               ]
     },
