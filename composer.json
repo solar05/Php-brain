@@ -1,6 +1,6 @@
 {
     "name": "artems/brain",
-    "bin": ["bin/brain-games", "bin/brain-even"],
+    "bin": ["bin/brain-games", "bin/brain-even", "bin/brain-calc"],
     "description": "Brain games project",
     "type": "project",
     "authors": [
@@ -16,6 +16,7 @@
     "autoload": {
         "files": ["src/Cli.php",
                   "src/games/even.php",
+                  "src/games/calc.php",
                   "src/gameEngine.php"
               ]
     },

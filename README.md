@@ -10,4 +10,6 @@ composer require artems/brain:dev-master
 ## Asciinema :
 Brain-games : [link](https://asciinema.org/a/nzJuT53LzOZvEIybwxwyEeIGf)
 
-Brain-even: [link](https://asciinema.org/a/Nn6UCMzzaYB3Z97P61q6ryt6m) s
+Brain-even: [link](https://asciinema.org/a/Nn6UCMzzaYB3Z97P61q6ryt6m)
+
+Brain-calc: [link](https://asciinema.org/a/4YklKWjYxebj8lS3gB4nmpksl)

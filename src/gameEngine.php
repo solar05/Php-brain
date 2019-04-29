@@ -25,7 +25,7 @@ function playGame($getGameStage, $rules)
     $correctAnswerCounter = 0;
     while ($correctAnswerCounter < 3) {
         $currentGameStage = $getGameStage();
-        line('Question: %d', $currentGameStage['question']);
+        line('Question: %s', $currentGameStage['question']);
         $playerAnswer = prompt('Your answer: ');
         if ($currentGameStage['answer'] == $playerAnswer) {
             $correctAnswerCounter += 1;
