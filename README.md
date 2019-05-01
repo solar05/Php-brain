@@ -10,9 +10,17 @@ Five simple console games, aimed to warm-up your brains!
 
 ## Installation:
 composer require artems/brain:dev-master
+
 ![](installation.gif)
 
 ## Gameplay: 
+To start playing just type in console one of the game:
+1. brain-even
+2. brain-calc
+3. brain-gcd
+4. brain-progression
+5. brain-prime
+6. brain-games (that's game just for testing, there is no gameplay)
 
 ![](gameplay.gif)
 
