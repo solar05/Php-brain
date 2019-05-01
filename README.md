@@ -1,15 +1,22 @@
+## Badges:
 [![Build Status](https://travis-ci.com/solar05/project-lvl1-s482.svg?branch=master)](https://travis-ci.com/solar05/project-lvl1-s482)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8848cd6552386d8b312e/maintainability)](https://codeclimate.com/github/solar05/project-lvl1-s482/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8848cd6552386d8b312e/test_coverage)](https://codeclimate.com/github/solar05/project-lvl1-s482/test_coverage)
 
+## Description:
+Five simple console games, aimed to warm-up your brains!
+
 ## Installation:
 composer require artems/brain:dev-master
 ![](installation.gif)
 
+## Gameplay: 
+
+![](gameplay.gif)
+
 ## Asciinema :
-Brain-games : [link](https://asciinema.org/a/nzJuT53LzOZvEIybwxwyEeIGf)
 
 Brain-even: [link](https://asciinema.org/a/Nn6UCMzzaYB3Z97P61q6ryt6m)
 
