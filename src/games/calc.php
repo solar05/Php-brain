@@ -3,7 +3,7 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\gameEngine\playGame;
 
-const RULES = 'What is the result of the expression?';
+const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = array('+', '-', '*', '/');
 
 function playCalc()
@@ -36,5 +36,5 @@ function playCalc()
         return array('question' => $question,
         'answer' => $answer);
     };
-    playGame($getGameStage, RULES);
+    playGame($getGameStage, DESCRIPTION);
 }

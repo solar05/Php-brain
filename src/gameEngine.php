@@ -4,10 +4,12 @@ namespace BrainGames\gameEngine;
 use function \cli\line;
 use function \cli\prompt;
 
-function greet($gameDesc)
+const GAME_ROUNDS = 3;
+
+function greet($gameDescription)
 {
     line('Welcome to the Brain Games!');
-    line('%s', $gameDesc);
+    line('%s', $gameDescription);
 }
 
 function getPlayerName()
@@ -18,17 +20,15 @@ function getPlayerName()
 }
 
 
-function playGame(callable $getGameStage, $rules)
+function playGame(callable $getGameStage, $gameDescription)
 {
-    greet($rules);
+    greet($gameDescription);
     $playerName = getPlayerName();
-    $correctAnswerCounter = 0;
-    while ($correctAnswerCounter < 3) {
+    for ($correctAnswerCounter = 0; $correctAnswerCounter < GAME_ROUNDS; $correctAnswerCounter += 1) {
         $currentGameStage = $getGameStage();
         line('Question: %s', $currentGameStage['question']);
         $playerAnswer = prompt('Your answer: ');
         if ($currentGameStage['answer'] == $playerAnswer) {
-            $correctAnswerCounter += 1;
             line('Correct!');
         } else {
             line('"%s" is wrong answer ;(. Correct answer was "%s".', $playerAnswer, $currentGameStage['answer']);

@@ -3,7 +3,7 @@ namespace BrainGames\Games\Gcd;
 
 use function BrainGames\gameEngine\playGame;
 
-const RULES = 'Find the greatest common divisor of given numbers.';
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 function findGcd($firstNum, $secondNum)
 {
@@ -23,5 +23,5 @@ function playGcd()
         return array('question' => $question,
             'answer' => $answer);
     };
-    playGame($getGameStage, RULES);
+    playGame($getGameStage, DESCRIPTION);
 }

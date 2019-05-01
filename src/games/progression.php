@@ -3,8 +3,9 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\gameEngine\playGame;
 
-const RULES = 'What number is missing in the progression?';
+const DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_SIZE = 10;
+
 function getProgression($progressionStep, $length)
 {
     $firstElement = rand(1, 50);
@@ -36,5 +37,5 @@ function playProgression()
         return array('question' => $question,
             'answer' => $answer);
     };
-    playGame($getGameStage, RULES);
+    playGame($getGameStage, DESCRIPTION);
 }
