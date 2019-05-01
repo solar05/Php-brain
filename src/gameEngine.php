@@ -18,7 +18,7 @@ function getPlayerName()
 }
 
 
-function playGame($getGameStage, $rules)
+function playGame(callable $getGameStage, $rules)
 {
     greet($rules);
     $playerName = getPlayerName();
