@@ -5,35 +5,36 @@ use function BrainGames\gameEngine\playGame;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_SIZE = 10;
+const PROGRESSION_MAX_NUMBER = 50;
 
-function getProgression($progressionStep, $length)
+function getProgression($firstElement, $progressionStep, $length)
 {
-    $firstElement = rand(1, 50);
-    $progression = array($firstElement);
-    for ($i = 1; $i < $length; $i += 1) {
-        $prevElement = $progression[$i - 1];
-        array_push($progression, $prevElement + $progressionStep);
+    $progression = array();
+    for ($counter = 0; $counter < $length; $counter += 1) {
+        $nextElement = $firstElement + $progressionStep * $counter;
+        array_push($progression, $nextElement);
     }
     return $progression;
 }
 
-function hideElement($array)
+function hideElement($progression)
 {
-    $elementToHide = rand(1, 9);
-    $hiddenElement = $array[$elementToHide];
-    $newArray = $array;
-    $newArray[$elementToHide] = '..';
-    return array($newArray, $hiddenElement);
+    $chooseElementToHide = rand(0, PROGRESSION_SIZE - 1);
+    $hiddenElement = $progression[$chooseElementToHide];
+    $progressionWithoutElement = $progression;
+    $progressionWithoutElement[$chooseElementToHide] = '..';
+    return array($progressionWithoutElement, $hiddenElement);
 }
 
 function playProgression()
 {
     $getGameStage = function () {
-        $progressionStep = rand(1, 50);
-        $progression = getProgression($progressionStep, PROGRESSION_SIZE);
-        $proceededProgr = hideElement($progression);
-        $question = implode(' ', $proceededProgr[0]);
-        $answer = $proceededProgr[1];
+        $progressionStep = rand(1, PROGRESSION_MAX_NUMBER);
+        $firstProgressionElement = rand(1, PROGRESSION_MAX_NUMBER);
+        $progression = getProgression($firstProgressionElement, $progressionStep, PROGRESSION_SIZE);
+        $proceededProgression = hideElement($progression);
+        $question = implode(' ', $proceededProgression[0]);
+        $answer = $proceededProgression[1];
         return array('question' => $question,
             'answer' => $answer);
     };
