@@ -6,6 +6,7 @@
 
 ## Installation:
 composer require artems/brain:dev-master
+![](installation.gif)
 
 ## Asciinema :
 Brain-games : [link](https://asciinema.org/a/nzJuT53LzOZvEIybwxwyEeIGf)
