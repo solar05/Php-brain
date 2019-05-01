@@ -27,7 +27,7 @@ function playCalc()
     );
     $getGameStage = function () use ($executeOperations) {
         $firstNumber = rand(1, MAX_NUMBER);
-        $secondNumber = rand(1, 50);
+        $secondNumber = rand(1, MAX_NUMBER);
         if ($firstNumber % $secondNumber == 0) {
             $chooseOperation = rand(0, 3);
         } else {
