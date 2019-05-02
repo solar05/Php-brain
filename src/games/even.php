@@ -1,11 +1,10 @@
 <?php
-
 namespace BrainGames\Games\Even;
 
 use function BrainGames\gameEngine\playGame;
-const MAX_NUMBER = 1000;
 
 const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no"';
+const MAX_NUMBER = 1000;
 
 function isEven($num)
 {
