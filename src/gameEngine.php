@@ -20,12 +20,10 @@ function playGame(callable $getGameStage, $gameDescription)
             line('Correct!');
         } else {
             line('"%s" is wrong answer ;(. Correct answer was "%s".', $playerAnswer, $currentGameStage[1]);
-            break;
+            line('Let`s try again, %s!', $playerName);
+            return;
         }
     }
-    if ($correctAnswerCounter == 3) {
-        line('Congratulations, %s!', $playerName);
-    } else {
-        line('Let`s try again, %s', $playerName);
-    }
+    line('Congratulations, %s!', $playerName);
+    return;
 }
