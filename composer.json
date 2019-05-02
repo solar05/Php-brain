@@ -1,40 +1,40 @@
 {
     "name": "artems/brain",
     "bin": [
-      "bin/brain-games",
-      "bin/brain-even",
-      "bin/brain-calc",
-      "bin/brain-progression",
-      "bin/brain-prime",
-      "bin/brain-gcd"
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-progression",
+        "bin/brain-prime",
+        "bin/brain-gcd"
     ],
     "description": "Brain games project",
     "keywords": ["game", "console"],
     "type": "project",
     "authors": [
         {
-          "name": "solar05",
-          "email": "artem00298@gmail.com"
+            "name": "solar05",
+            "email": "artem00298@gmail.com"
         }
     ],
     "scripts": {
         "phpcs": "phpcs"
     },
     "autoload": {
-      "files": [
-        "src/Cli.php",
-        "src/games/even.php",
-        "src/games/calc.php",
-        "src/games/gcd.php",
-        "src/games/progression.php",
-        "src/games/prime.php",
-        "src/gameEngine.php"
-      ]
+        "files": [
+            "src/Cli.php",
+            "src/games/even.php",
+            "src/games/calc.php",
+            "src/games/gcd.php",
+            "src/games/progression.php",
+            "src/games/prime.php",
+            "src/gameEngine.php"
+        ]
     },
     "require": {
-      "wp-cli/php-cli-tools": "^0.11.11"
+        "wp-cli/php-cli-tools": "^0.11.11"
     },
     "require-dev": {
-      "squizlabs/php_codesniffer": "^3.0@dev"
+        "squizlabs/php_codesniffer": "^3.0@dev"
     }
 }
