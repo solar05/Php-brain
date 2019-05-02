@@ -17,8 +17,7 @@ function playEven()
     $getGameStage = function () {
         $question = rand(1, MAX_NUMBER);
         $answer = isEven($question) ? 'yes' : 'no';
-        return array('question' => $question,
-                     'answer' => $answer);
+        return array($question, $answer);
     };
     playGame($getGameStage, DESCRIPTION);
 }

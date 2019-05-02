@@ -17,12 +17,11 @@ function getProgression($firstElement, $progressionStep, $length)
     return $progression;
 }
 
-function hideElement($progression)
+function hideProgressionElement($elementToHide, $progression)
 {
-    $chooseElementToHide = rand(0, PROGRESSION_SIZE - 1);
-    $hiddenElement = $progression[$chooseElementToHide];
+    $hiddenElement = $progression[$elementToHide];
     $progressionWithoutElement = $progression;
-    $progressionWithoutElement[$chooseElementToHide] = '..';
+    $progressionWithoutElement[$elementToHide] = '..';
     return array($progressionWithoutElement, $hiddenElement);
 }
 
@@ -32,11 +31,11 @@ function playProgression()
         $progressionStep = rand(1, PROGRESSION_MAX_NUMBER);
         $firstProgressionElement = rand(1, PROGRESSION_MAX_NUMBER);
         $progression = getProgression($firstProgressionElement, $progressionStep, PROGRESSION_SIZE);
-        $proceededProgression = hideElement($progression);
+        $elementToHide = rand(0, PROGRESSION_SIZE - 1);
+        $proceededProgression = hideProgressionElement($elementToHide, $progression);
         $question = implode(' ', $proceededProgression[0]);
         $answer = $proceededProgression[1];
-        return array('question' => $question,
-            'answer' => $answer);
+        return array($question, $answer);
     };
     playGame($getGameStage, DESCRIPTION);
 }

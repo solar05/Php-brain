@@ -21,8 +21,7 @@ function playGcd()
         $secondNumber = rand(1, MAX_NUMBER);
         $question = "$firstNumber $secondNumber";
         $answer = findGcd($firstNumber, $secondNumber);
-        return array('question' => $question,
-            'answer' => $answer);
+        return array($question, $answer);
     };
     playGame($getGameStage, DESCRIPTION);
 }

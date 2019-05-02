@@ -4,34 +4,22 @@ namespace BrainGames\gameEngine;
 use function \cli\line;
 use function \cli\prompt;
 
-const GAME_ROUNDS = 3;
-
-function greet($gameDescription)
-{
-    line('Welcome to the Brain Games!');
-    line('%s', $gameDescription);
-}
-
-function getPlayerName()
-{
-    $name = prompt('May I have your name?');
-    line('Hello, %s', $name);
-    return $name;
-}
-
+const GAME_ROUNDS_COUNT = 3;
 
 function playGame(callable $getGameStage, $gameDescription)
 {
-    greet($gameDescription);
-    $playerName = getPlayerName();
-    for ($correctAnswerCounter = 0; $correctAnswerCounter < GAME_ROUNDS; $correctAnswerCounter += 1) {
+    line('Welcome to the Brain Games!');
+    line('%s', $gameDescription);
+    $playerName = prompt('May I have your name?');
+    line('Hello, %s', $playerName);
+    for ($correctAnswerCounter = 0; $correctAnswerCounter < GAME_ROUNDS_COUNT; $correctAnswerCounter += 1) {
         $currentGameStage = $getGameStage();
-        line('Question: %s', $currentGameStage['question']);
+        line('Question: %s', $currentGameStage[0]);
         $playerAnswer = prompt('Your answer: ');
-        if ($currentGameStage['answer'] == $playerAnswer) {
+        if ($currentGameStage[1] == $playerAnswer) {
             line('Correct!');
         } else {
-            line('"%s" is wrong answer ;(. Correct answer was "%s".', $playerAnswer, $currentGameStage['answer']);
+            line('"%s" is wrong answer ;(. Correct answer was "%s".', $playerAnswer, $currentGameStage[1]);
             break;
         }
     }

@@ -21,11 +21,9 @@ function isPrime($number)
 function playPrime()
 {
     $getGameStage = function () {
-        $number = rand(1, MAX_NUMBER);
-        $question = $number;
-        $answer = isPrime($number) ? 'yes' : 'no';
-        return array('question' => $question,
-            'answer' => $answer);
+        $question = rand(1, MAX_NUMBER);
+        $answer = isPrime($question) ? 'yes' : 'no';
+        return array($question, $answer);
     };
     playGame($getGameStage, DESCRIPTION);
 }

@@ -6,12 +6,12 @@ use function BrainGames\gameEngine\playGame;
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = array('+', '-', '*', '/');
 const MAX_NUMBER = 50;
-
+const OPERATIONS_WITH_DIVISION = 3;
+const OPERATIONS_WITHOUT_DIVISION = 2;
 
 function playCalc()
 {
-    $executeOperations = array(
-       '+' =>
+    $executeOperations = array('+' =>
     function ($a, $b) {
         return $a + $b;
     }, '-' =>
@@ -29,15 +29,14 @@ function playCalc()
         $firstNumber = rand(1, MAX_NUMBER);
         $secondNumber = rand(1, MAX_NUMBER);
         if ($firstNumber % $secondNumber == 0) {
-            $chooseOperation = rand(0, 3);
+            $chooseOperation = rand(0, OPERATIONS_WITH_DIVISION);
         } else {
-            $chooseOperation = rand(0, 2);
+            $chooseOperation = rand(0, OPERATIONS_WITHOUT_DIVISION);
         }
         $currentOperation = OPERATIONS[$chooseOperation];
         $question = "$firstNumber $currentOperation $secondNumber";
         $answer = $executeOperations[$currentOperation]($firstNumber, $secondNumber);
-        return array('question' => $question,
-        'answer' => $answer);
+        return array($question, $answer);
     };
     playGame($getGameStage, DESCRIPTION);
 }
