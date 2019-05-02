@@ -11,7 +11,7 @@ Five simple console games, aimed to warm-up your brains!
 ## Installation:
 composer require artems/brain:dev-master
 
-![](gif/installation.gif)
+![](gifs/installation.gif)
 
 ## Gameplay: 
 To start playing just type in console one of the game:
