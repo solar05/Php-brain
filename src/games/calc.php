@@ -20,17 +20,13 @@ function playCalc()
             return $a * $b;
         },
         '/' => function ($a, $b) {
-            return $a / $b;
+            return round($a / $b);
         }
     );
     $getGameStage = function () use ($executeOperations) {
         $firstNumber = rand(1, MAX_NUMBER);
         $secondNumber = rand(1, MAX_NUMBER);
-        if ($firstNumber % $secondNumber == 0) {
-            $chooseOperation = rand(0, count($executeOperations) - 1);
-        } else {
-            $chooseOperation = rand(0, count($executeOperations) - 2);
-        }
+        $chooseOperation = rand(0, count($executeOperations) - 1);
         $currentOperation = OPERATIONS[$chooseOperation];
         $question = "$firstNumber $currentOperation $secondNumber";
         $answer = $executeOperations[$currentOperation]($firstNumber, $secondNumber);
