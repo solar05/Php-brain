@@ -8,14 +8,15 @@ const MAX_NUMBER = 100;
 
 function isPrime($number)
 {
-    if ($number <= 2) {
+    if ($number < 2) {
         return false;
     }
-    $divisor = 2;
-    while (($divisor * $divisor <= $number) && ($number % $divisor != 0)) {
-        $divisor += 1;
+    for ($divisor = 2; $divisor <= sqrt($number); $divisor += 1) {
+        if ($number % $divisor == 0) {
+            return false;
+        }
     }
-    return $divisor * $divisor > $number;
+    return true;
 }
 
 function playPrime()
