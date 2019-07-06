@@ -17,6 +17,7 @@
             "email": "artem00298@gmail.com"
         }
     ],
+    "license": "MIT",
     "scripts": {
         "phpcs": "phpcs",
         "phpunit": "phpunit",
